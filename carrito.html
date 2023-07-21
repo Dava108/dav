@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carrito de Compras</title>
+  <link rel="stylesheet" href="styles5.css"> <!-- Agrega tu archivo CSS si lo tienes -->
+  <link rel="preload" href="css/normalize.css" as="style">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link href="https://fonts.googleapis.com/css2?family=Krub:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="preload" href="css/style1.css" as="style">
+  <link href="css/style1.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/car.css">
+</head>
+<!DOCTYPE html>
+<html>
+  <header>
+    <center><div style="margin-top: 20px;" class="logo"><img src="logo.jpg" width="100px" height="100px"><img src="LOGOBUENO.jpg" width="300px" height="100px"></div></center>
+    <br>
+</header>
+
+<div class="nav-bg">
+    <nav class="navegacion-principal contenedor">
+        <a href="practica8.html">Inicio</a>
+        <a href="sobremi.html">Historia</a>
+        <a href="calendario.html">Vision y Mision</a>
+        <a href="index.html">Productos</a>
+        <a href="convocatoria.html">Contactos</a>
+        
+        
+    </nav>
+</div>
+
+<section class="cart-section">
+    <div class="cart-items">
+      <h2>Carrito de Compras</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Producto</th>
+            <th>Precio Unitario</th>
+            <th>Cantidad</th>
+            <th>Total</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <div class="product-info">
+                <img src="coco.jpg" alt="Producto 1">
+                <div class="product-details">
+                  <h3>Producto 1</h3>
+                  <p>Coyote de Cafe</p>
+                </div>
+              </div>
+            </td>
+            <td>$19.99</td>
+            <td>
+              <input type="number" value="2" min="1">
+            </td>
+            <td>$39.98</td>
+            <td><button class="remove-button">Eliminar</button></td>
+          </tr>
+          <tr>
+            <td>
+              <div class="product-info">
+                <img src="Horchata.jpg" alt="Producto 2">
+                <div class="product-details">
+                  <h3>Producto 2</h3>
+                  <p>Coyote</p>
+                </div>
+              </div>
+            </td>
+            <td>$24.99</td>
+            <td>
+              <input type="number" value="1" min="1">
+            </td>
+            <td>$24.99</td>
+            <td><button class="remove-button">Eliminar</button></td>
+          </tr>
+          <tr>
+            <td>
+              <div class="product-info">
+                <img src="Horchata.jpg" alt="Producto 2">
+                <div class="product-details">
+                  <h3>Producto 3</h3>
+                  <p>Coyote</p>
+                </div>
+              </div>
+            </td>
+            <td>$24.99</td>
+            <td>
+              <input type="number" value="1" min="1">
+            </td>
+            <td>$24.99</td>
+            <td><button class="remove-button">Eliminar</button></td>
+          </tr>
+          <!-- Agrega más filas de productos si es necesario -->
+        </tbody>
+      </table>
+      <div class="cart-summary">
+        <p>Total: $120.97</p>
+        <button class="checkout-button">Finalizar Compra</button>
+      </div>
+    </div>

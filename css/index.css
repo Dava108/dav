@@ -1,0 +1,261 @@
+/* General */
+body {
+  background: #fff;
+  color: #444;
+  font-family: "Open Sans", sans-serif;
+  background-color: black;
+}
+::-webkit-scrollbar{
+  width: 5px;
+}
+::-webkit-scrollbar-track{
+  background: rgb(32, 32, 32);
+}
+::-webkit-scrollbar-thumb{
+  background-color: rgb(145, 145, 145);
+}
+/* Inicio */
+#hero {
+  width: 100%;
+  position: relative;
+  background: url("../fondo2.jpg") center bottom no-repeat;
+  background-size: cover;
+  padding: 130px 0 150px 0;
+}
+#hero h1 {
+  font-size: 80px; 
+  font-weight: 100;
+  line-height: 56px;
+  font-family: 'Rye', cursive;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  color: rgb(5, 5, 5);
+  text-shadow: rgb(94, 94, 94) 1px 3px;
+  text-align: center;
+}
+
+#hero h2 {
+  font-size: 50px;
+  font-family: 'Rye', cursive;
+  font-weight: 100;
+  text-transform: uppercase;
+  color: rgb(17, 16, 16);
+  text-shadow: rgb(9, 9, 9) 1px 3px;
+  text-align: center;
+
+}
+@media (max-width: 992px) {
+  #hero h1 {
+    font-size: 55px;
+    line-height: 36px;
+  }
+
+  #hero h2 {
+    font-size: 25px; 
+    line-height: 40px;
+  }
+}
+/* Catalogo */
+.catalogo{
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+.catalogo .catalogo-wrap {
+  border-radius: 10px;
+  height: 100%;
+  overflow: hidden;
+  
+}
+
+.catalogo .catalogo-wrap img {
+  transition: 0.3s;
+  position: relative;
+  z-index: 1;
+}
+
+.catalogo .catalogo-wrap .catalogo-info {
+  padding: 25px 20px;
+  background-color: #fff;
+  position: relative;
+  border-top: 1px solid #f3f3f3;
+  z-index: 2;
+}
+
+.catalogo .catalogo-wrap .catalogo-info h4 {
+  font-size: 18px;
+  font-weight: 900;
+  letter-spacing: 1px;
+  color: black;
+  font-family: 'Viaoda Libre', cursive;
+  text-align: center;
+}
+
+.catalogo .catalogo-wrap .catalogo-info p {
+  color: #6c757d;
+  font-size: 14px;
+  margin-bottom: 0;
+  color: #444;
+  text-align: center;
+}
+
+.catalogo .catalogo-wrap:hover img {
+  transform: scale(1.2);
+  filter: grayscale(50%);
+}
+.catalogo h1{
+  color: rgb(10, 10, 10);
+  font-size: 45px;
+  font-family: 'Viaoda Libre', cursive;
+  line-height: 20px;
+  font-weight: 500;
+}
+.catalogo p{
+  color: rgb(4, 4, 4);
+  font-size: 25px;
+  font-family: 'Viaoda Libre', cursive;
+  font-weight: 550;
+}
+@media (max-width: 992px) {
+  .catalogo  h1 {
+    font-size: 45px;
+    line-height: 30px;
+    text-align: center;
+  }
+
+ .catalogo p {
+    font-size: 25px;
+    text-align: center;
+    line-height: 30px;
+    
+  }
+}
+/* Pie de pagina */
+#footer {
+  background: #060606;
+  padding: 0 0 30px 0;
+  color: #eee;
+  font-size: 14px;
+}
+#footer .copyright {
+  text-align: center;
+  padding-top: 30px;
+}
+
+#footer .credits {
+  text-align: center;
+  font-size: 13px;
+  color: #f1f7ff;
+}
+
+#footer .credits a {
+  color: #bfddfe;
+}
+
+#footer .credits a:hover {
+  color: #f1f7ff;
+}
+/* Contacto de Whatsapp (Boton) */
+.back-to-top {
+  position: fixed;
+  visibility: hidden;
+  opacity: 0;
+  right: 25px;
+  bottom: 15px;
+  z-index: 996;
+  width: 64px;
+  height: 64px; 
+}
+.back-to-top i {
+  font-size: 28px;
+  color: #fff;
+  line-height: 0;
+}
+
+.back-to-top:hover {
+  filter: grayscale(50%);
+}
+
+.back-to-top.active {
+  visibility: visible;
+  opacity: 1;
+}
+img.animated-gif{
+  width: 40px;
+  height: auto;
+  border-radius: 20px;
+}
+
+/* Animacion de Emojis */
+@keyframes emojis-fall{
+  0%{
+    top: -10%;
+  }
+  100%{
+    top:  100%;
+  }
+}
+@keyframes emojis-snake{
+  0%{
+    transform: translateX(0px);
+  }
+  50%{
+    transform: translateX(80px);
+  }
+  100%{
+    transform: translateX(0px);
+  }
+}
+.emoji{
+  position: fixed;
+  z-index: 9999;
+  top: -10%;
+  animation-name: emojis-fall, emojis-snake;
+  animation-duration:  10s, 3s;
+  animation-timing-function: linear, ease-in-out;
+  animation-iteration-count: infinite, infinite;
+  animation-play-state: running, running;
+}
+.emoji:nth-of-type(0){
+  left: 1%;
+  animation-delay: 0s, 0s;
+}
+.emoji:nth-of-type(1){
+  left: 10%;
+  -webkit-animation-delay: 1s, 1s ;
+  animation-delay: 1s, 1s;
+}
+.emoji:nth-of-type(2){
+  left: 20%;
+  -webkit-animation-delay: 6s, 0.5s ;
+  animation-delay: 6s, 0.5s;
+}
+.emoji:nth-of-type(3){
+  left: 30%;
+  -webkit-animation-delay: 4s, 2s ;
+  animation-delay: 4s, 2s;
+}
+.emoji:nth-of-type(4){
+  left: 40%;
+  -webkit-animation-delay: 3s, 2s ;
+  animation-delay: 3s, 2s;
+}
+.emoji:nth-of-type(5){
+  left: 50%;
+  -webkit-animation-delay: 8s, 0.5s ;
+  animation-delay: 8s, 0.5s;
+}
+.emoji:nth-of-type(6){
+  left: 60%;
+  -webkit-animation-delay: 5s, 5s ;
+  animation-delay: 5s, 5s;
+}
+.emoji:nth-of-type(7){
+  left: 70%;
+  -webkit-animation-delay: 1s, 2s ;
+  animation-delay: 1s, 2s;
+}
+.emoji:nth-of-type(8){
+  left: 80%;
+  -webkit-animation-delay: 2s, 0.5s ;
+  animation-delay: 2s, 0.5s;
+}
